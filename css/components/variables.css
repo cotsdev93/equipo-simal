@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "bebas";
+  src: url("./../assets/fonts/Bebas-Regular.otf");
+}
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "bebas";
+}
+
+/*# sourceMappingURL=variables.css.map */
