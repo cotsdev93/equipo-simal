@@ -13,7 +13,6 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          transform: translateY(3px);
           .gloves {
             width: 40px;
             padding: -5px;
@@ -24,8 +23,10 @@ body {
             transform: translateY(-10px);
           }
           span {
+            margin-left: 5px;
             font-size: 20px;
             color: $white;
+            letter-spacing: 2px;
           }
         }
         .fa-bars {
@@ -44,27 +45,31 @@ body {
           li {
             a {
               color: $white;
+              letter-spacing: 2px;
             }
           }
         }
-        .cartContainer {
-          background-color: $white;
-          border-radius: 50%;
-          width: 35px;
-          height: 35px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .fa-cart-shopping {
-            transform: translateX(-1px);
-            font-size: 20px;
+        a {
+          text-decoration: none;
+          .cartContainer {
+            background-color: $white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .fa-cart-shopping {
+              transform: translateX(-1px);
+              font-size: 20px;
+              color: $black;
+            }
           }
         }
       }
     }
   }
 }
-
 @media (max-width: 737px) {
   body {
     header {
@@ -123,7 +128,7 @@ body {
           background-color: $black;
           position: absolute;
           right: -1px;
-          top: -110px;
+          top: -160px;
           width: 150px;
           padding: 25px 0px;
           z-index: 0;
