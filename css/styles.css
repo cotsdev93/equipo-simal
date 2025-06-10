@@ -247,19 +247,92 @@ body .productsContainer #products .productContainer .productSpecs {
 
 @media (max-width: 737px) {
   body .search-container {
-    margin: 20px auto;
-    padding: 0 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto 10px auto;
+    padding: 0 20px;
+  }
+  body .search-container .search-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
   }
   body .search-container .search-form .search-input {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-  body .search-container .search-form .search-button {
-    width: 30px;
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #111111;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
     height: 30px;
   }
+  body .search-container .search-form .search-input:focus {
+    border-color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  body .search-container .search-form .search-input::placeholder {
+    color: #999;
+  }
+  body .search-container .search-form .search-button {
+    background-color: #111111;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .search-container .search-form .search-button:hover {
+    background-color: black;
+    transform: scale(1.05);
+  }
   body .search-container .search-form .search-button i {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  body .categories {
+    margin: 0px 10px;
+  }
+  body .categories ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .categories ul li a {
+    color: #111111;
+  }
+  body .productsContainer {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1882352941);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .productsContainer #products {
+    display: flex;
+    gap: 10px;
+  }
+  body .productsContainer #products .productContainer {
+    border-radius: 2px;
+    width: 150px;
+    box-shadow: 0px 0px 3px 0.5px rgba(0, 0, 0, 0.1882352941);
+    overflow: hidden;
+  }
+  body .productsContainer #products .productContainer .imgContainer {
+    border-bottom: solid 1px rgb(215, 215, 215);
+    background-color: rgb(240, 240, 240);
+  }
+  body .productsContainer #products .productContainer .imgContainer img {
+    width: 100%;
+  }
+  body .productsContainer #products .productContainer .productSpecs {
+    padding: 3px;
   }
 }
 
