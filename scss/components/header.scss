@@ -1,5 +1,4 @@
-body {
-  position: relative;
+
   header {
     // display: none;
     position: absolute;
@@ -79,7 +78,7 @@ body {
       }
     }
   }
-}
+
 @media (max-width: 737px) {
   body {
     position: relative;

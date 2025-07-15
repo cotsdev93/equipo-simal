@@ -18,6 +18,17 @@
 body {
   overflow-X: hidden;
   border: solid 5px blue;
+  position: relative;
+  max-width: 100%;
+}
+
+@media (max-width: 737px) {
+  body {
+    overflow: hidden;
+    border: solid 5px rgb(34, 168, 32);
+    position: relative;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=variables.css.map */
