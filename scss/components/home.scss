@@ -166,10 +166,11 @@
       z-index: 1;
       // border: solid 5px red;
       .backgroundImg {
-        width: 100%;
+        width: auto;
         height: 100%;
         position: relative;
         border: solid 20px pink;
+        // overflow: hidden;
         img {
           width: 100%;
           height: 100%;

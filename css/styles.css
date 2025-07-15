@@ -529,7 +529,7 @@ body .productsContainer #products .productContainer .productSpecs {
     z-index: 1;
   }
   #home .firstH .backgroundImg {
-    width: 100%;
+    width: auto;
     height: 100%;
     position: relative;
     border: solid 20px pink;
