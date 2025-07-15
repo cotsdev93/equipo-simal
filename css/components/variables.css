@@ -15,4 +15,8 @@
   display: none;
 }
 
+body {
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=variables.css.map */

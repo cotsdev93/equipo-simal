@@ -16,6 +16,10 @@
 }
 
 body {
+  overflow: hidden;
+}
+
+body {
   position: relative;
 }
 body header {
