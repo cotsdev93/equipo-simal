@@ -8,6 +8,7 @@
   height: fit-content;
   position: relative;
   z-index: 1;
+  transition: all 1s ease-in-out;
 }
 #home .firstH .backgroundImg {
   height: fit-content;
@@ -45,6 +46,9 @@
 #home .firstH .firstHContent .sloganContainer img {
   width: 100%;
 }
+#home .toggle {
+  transform: translateX(-100%);
+}
 #home .secondH {
   width: 50%;
   height: 100%;
@@ -52,27 +56,22 @@
   right: 0;
 }
 #home .secondH .carrouselContainer {
-  height: 100%;
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-}
-#home .secondH .carrouselContainer .carrouselContent {
   width: 100%;
   height: 100%;
-  display: flex;
-  overflow: hidden;
   position: relative;
 }
+#home .secondH .carrouselContainer .carrouselContent {
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
 #home .secondH .carrouselContainer .carrouselContent img {
+  flex-shrink: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  scroll-snap-align: start;
 }
 #home .secondH .chevronBL {
   position: absolute;
@@ -88,7 +87,9 @@
   align-items: center;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1;
+  pointer-events: auto;
 }
 #home .secondH .chevronBL .fa-chevron-left {
   font-size: 14px;
@@ -196,6 +197,9 @@
   #home .firstH .firstHContent .sloganContainer img {
     width: 100%;
   }
+  #home .toggle {
+    transform: translateY(-110%);
+  }
   #home .secondH {
     width: 100%;
     height: 50vh;
@@ -203,27 +207,22 @@
     right: 0;
   }
   #home .secondH .carrouselContainer {
-    height: 100%;
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-  }
-  #home .secondH .carrouselContainer .carrouselContent {
     width: 100%;
     height: 100%;
-    display: flex;
-    overflow: hidden;
     position: relative;
   }
+  #home .secondH .carrouselContainer .carrouselContent {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
   #home .secondH .carrouselContainer .carrouselContent img {
+    flex-shrink: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-width: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    scroll-snap-align: start;
   }
   #home .secondH .chevronBL {
     position: absolute;
@@ -239,7 +238,9 @@
     align-items: center;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    pointer-events: auto;
   }
   #home .secondH .chevronBL .fa-chevron-left {
     font-size: 14px;
