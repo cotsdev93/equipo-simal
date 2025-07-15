@@ -1,0 +1,310 @@
+#home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  .firstH {
+    width: 55%;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    .backgroundImg {
+      height: fit-content;
+
+      img {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+    .firstHContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      gap: 5px;
+
+      .logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        img {
+          width: 90%;
+        }
+      }
+      .sloganContainer {
+        height: fit-content;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .secondH {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    .carrouselContainer {
+      height: 100%;
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      .carrouselContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          min-width: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        }
+      }
+    }
+    .chevronBL {
+      position: absolute;
+      top: 50%;
+      left: 45px;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: rgba(219, 29, 29, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+      .fa-chevron-left {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        transform: translateX(-1px);
+      }
+
+      &:hover {
+        background-color: rgba(219, 29, 29, 0.25);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+        .fa-chevron-left {
+          color: rgba(255, 255, 255, 0.85);
+          transform: scale(1.15) translateX(-1px);
+        }
+      }
+    }
+    .chevronBR {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: rgba(219, 29, 29, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+      .fa-chevron-right {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        transform: translateX(-1px);
+      }
+
+      &:hover {
+        background-color: rgba(219, 29, 29, 0.25);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+        .fa-chevron-right {
+          color: rgba(255, 255, 255, 0.85);
+          transform: scale(1.15) translateX(-1px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 737px) {
+  #home {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    border: solid 5px red;
+    .firstH {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+      z-index: 1;
+      border: solid 5px red;
+      .backgroundImg {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transform: rotate(90deg) scale(1.35);
+          transform-origin: center;
+        }
+      }
+
+      .firstHContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 5px;
+        // border: solid 1px red;
+        .logoContainer {
+          display: flex;
+          flex-direction: column;
+          justify-items: center;
+          align-items: center;
+          width: 60%;
+          // border: solid 1px red;
+          img {
+            width: 90%;
+          }
+        }
+
+        .sloganContainer {
+          height: fit-content;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          width: 60%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .secondH {
+      width: 100%;
+      height: 50vh;
+      position: absolute;
+      right: 0;
+      .carrouselContainer {
+        height: 100%;
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+        .carrouselContent {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+          }
+        }
+      }
+      .chevronBL {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: rgba(219, 29, 29, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        .fa-chevron-left {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.55);
+          transition: color 0.3s ease, transform 0.3s ease;
+          pointer-events: none;
+          transform: translateX(-1px);
+        }
+
+        &:hover {
+          background-color: rgba(219, 29, 29, 0.25);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+          .fa-chevron-left {
+            color: rgba(255, 255, 255, 0.85);
+            transform: scale(1.15) translateX(-1px);
+          }
+        }
+      }
+      .chevronBR {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: rgba(219, 29, 29, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        .fa-chevron-right {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.55);
+          transition: color 0.3s ease, transform 0.3s ease;
+          pointer-events: none;
+          transform: translateX(-1px);
+        }
+
+        &:hover {
+          background-color: rgba(219, 29, 29, 0.25);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+          .fa-chevron-right {
+            color: rgba(255, 255, 255, 0.85);
+            transform: scale(1.15) translateX(-1px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,11 +11,21 @@
   scroll-behavior: smooth;
   font-family: "bebas";
 }
+* ::-webkit-scrollbar {
+  display: none;
+}
 
+body {
+  position: relative;
+}
+body header {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
 body header nav {
   width: 100%;
-  height: 80px;
-  background-color: #111111;
+  height: 20vh;
   display: flex;
   justify-content: space-between;
   padding: 0px 40px;
@@ -50,18 +60,13 @@ body header nav .nav2 {
   align-items: center;
   gap: 40px;
 }
-body header nav .nav2 ul {
-  display: flex;
-  gap: 10px;
+body header nav .nav2 .puchinball {
+  display: none;
 }
-body header nav .nav2 ul li a {
-  color: #f5f5f5;
-  letter-spacing: 2px;
-}
-body header nav .nav2 a {
+body header nav .nav2 .cart {
   text-decoration: none;
 }
-body header nav .nav2 a .cartContainer {
+body header nav .nav2 .cart .cartContainer {
   background-color: #f5f5f5;
   border-radius: 50%;
   width: 35px;
@@ -70,37 +75,33 @@ body header nav .nav2 a .cartContainer {
   justify-content: center;
   align-items: center;
 }
-body header nav .nav2 a .cartContainer .fa-cart-shopping {
+body header nav .nav2 .cart .cartContainer .fa-cart-shopping {
   transform: translateX(-1px);
   font-size: 20px;
   color: #111111;
 }
 
 @media (max-width: 737px) {
+  body {
+    position: relative;
+  }
+  body header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+  }
   body header nav {
     width: 100%;
-    height: 80px;
+    height: 20vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 0px;
-  }
-  body header nav .nav1 {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    justify-content: space-between;
-    align-items: center;
     padding: 0px 20px;
-    z-index: 10;
-    background-color: #111111;
+    align-items: center;
   }
   body header nav .nav1 a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(3px);
   }
   body header nav .nav1 a .gloves {
     width: 40px;
@@ -112,37 +113,51 @@ body header nav .nav2 a .cartContainer .fa-cart-shopping {
     transform: translateY(-10px);
   }
   body header nav .nav1 a span {
+    margin-left: 5px;
     font-size: 20px;
     color: #f5f5f5;
+    letter-spacing: 2px;
+    display: none;
   }
   body header nav .nav1 .fa-bars {
-    display: block;
-    color: #f5f5f5;
+    display: none;
   }
   body header nav .nav2 {
-    display: flex;
-    flex-direction: column;
+    width: auto;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    background-color: #111111;
+    position: relative;
+  }
+  body header nav .nav2 .puchinball {
+    display: block;
+    width: 50px;
+    cursor: pointer;
+  }
+  body header nav .nav2 .puchinball img {
+    width: 100%;
+  }
+  body header nav .nav2 .comunidad {
     position: absolute;
-    right: -1px;
-    top: -160px;
-    width: 150px;
-    padding: 25px 0px;
-    z-index: 0;
-    transition: all 0.8s ease-in-out;
-  }
-  body header nav .nav2 ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  body header nav .nav2 ul li a {
+    top: 160px;
+    right: -150px;
+    transition: all 0.5s ease-in-out;
     color: #f5f5f5;
   }
-  body header nav .nav2 .cartContainer {
+  body header nav .nav2 .tienda {
+    position: absolute;
+    top: 130px;
+    right: -120px;
+    transition: all 0.5s ease-in-out;
+    color: #f5f5f5;
+  }
+  body header nav .nav2 .cart {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 80px;
+    right: -150px;
+  }
+  body header nav .nav2 .cart .cartContainer {
     background-color: #f5f5f5;
     border-radius: 50%;
     width: 35px;
@@ -151,12 +166,13 @@ body header nav .nav2 a .cartContainer .fa-cart-shopping {
     justify-content: center;
     align-items: center;
   }
-  body header nav .nav2 .cartContainer .fa-cart-shopping {
+  body header nav .nav2 .cart .cartContainer .fa-cart-shopping {
     transform: translateX(-1px);
     font-size: 20px;
+    color: #111111;
   }
-  body header nav .animation {
-    top: 80px;
+  body header nav .nav2 .toggle {
+    right: 7px;
   }
 }
 body .search-container {
@@ -333,6 +349,296 @@ body .productsContainer #products .productContainer .productSpecs {
   }
   body .productsContainer #products .productContainer .productSpecs {
     padding: 3px;
+  }
+}
+#home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+#home .firstH {
+  width: 55%;
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+}
+#home .firstH .backgroundImg {
+  height: fit-content;
+}
+#home .firstH .backgroundImg img {
+  width: 100%;
+  height: 100vh;
+}
+#home .firstH .firstHContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 5px;
+}
+#home .firstH .firstHContent .logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+#home .firstH .firstHContent .logoContainer img {
+  width: 90%;
+}
+#home .firstH .firstHContent .sloganContainer {
+  height: fit-content;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#home .firstH .firstHContent .sloganContainer img {
+  width: 100%;
+}
+#home .secondH {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+#home .secondH .carrouselContainer {
+  height: 100%;
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+#home .secondH .carrouselContainer .carrouselContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+#home .secondH .carrouselContainer .carrouselContent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+#home .secondH .chevronBL {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(219, 29, 29, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#home .secondH .chevronBL .fa-chevron-left {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transform: translateX(-1px);
+}
+#home .secondH .chevronBL:hover {
+  background-color: rgba(219, 29, 29, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+#home .secondH .chevronBL:hover .fa-chevron-left {
+  color: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15) translateX(-1px);
+}
+#home .secondH .chevronBR {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(219, 29, 29, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#home .secondH .chevronBR .fa-chevron-right {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transform: translateX(-1px);
+}
+#home .secondH .chevronBR:hover {
+  background-color: rgba(219, 29, 29, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+#home .secondH .chevronBR:hover .fa-chevron-right {
+  color: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15) translateX(-1px);
+}
+
+@media (max-width: 737px) {
+  #home {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    border: solid 5px red;
+  }
+  #home .firstH {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    border: solid 5px red;
+  }
+  #home .firstH .backgroundImg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  #home .firstH .backgroundImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(90deg) scale(1.35);
+    transform-origin: center;
+  }
+  #home .firstH .firstHContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+  }
+  #home .firstH .firstHContent .logoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 60%;
+  }
+  #home .firstH .firstHContent .logoContainer img {
+    width: 90%;
+  }
+  #home .firstH .firstHContent .sloganContainer {
+    height: fit-content;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 60%;
+  }
+  #home .firstH .firstHContent .sloganContainer img {
+    width: 100%;
+  }
+  #home .secondH {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+  }
+  #home .secondH .carrouselContainer {
+    height: 100%;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  #home .secondH .carrouselContainer .carrouselContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  #home .secondH .carrouselContainer .carrouselContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  #home .secondH .chevronBL {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(219, 29, 29, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #home .secondH .chevronBL .fa-chevron-left {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateX(-1px);
+  }
+  #home .secondH .chevronBL:hover {
+    background-color: rgba(219, 29, 29, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  #home .secondH .chevronBL:hover .fa-chevron-left {
+    color: rgba(255, 255, 255, 0.85);
+    transform: scale(1.15) translateX(-1px);
+  }
+  #home .secondH .chevronBR {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(219, 29, 29, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #home .secondH .chevronBR .fa-chevron-right {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateX(-1px);
+  }
+  #home .secondH .chevronBR:hover {
+    background-color: rgba(219, 29, 29, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  #home .secondH .chevronBR:hover .fa-chevron-right {
+    color: rgba(255, 255, 255, 0.85);
+    transform: scale(1.15) translateX(-1px);
   }
 }
 

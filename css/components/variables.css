@@ -11,5 +11,8 @@
   scroll-behavior: smooth;
   font-family: "bebas";
 }
+* ::-webkit-scrollbar {
+  display: none;
+}
 
 /*# sourceMappingURL=variables.css.map */

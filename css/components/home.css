@@ -1,0 +1,292 @@
+#home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+#home .firstH {
+  width: 55%;
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+}
+#home .firstH .backgroundImg {
+  height: fit-content;
+}
+#home .firstH .backgroundImg img {
+  width: 100%;
+  height: 100vh;
+}
+#home .firstH .firstHContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 5px;
+}
+#home .firstH .firstHContent .logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+#home .firstH .firstHContent .logoContainer img {
+  width: 90%;
+}
+#home .firstH .firstHContent .sloganContainer {
+  height: fit-content;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#home .firstH .firstHContent .sloganContainer img {
+  width: 100%;
+}
+#home .secondH {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+#home .secondH .carrouselContainer {
+  height: 100%;
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+#home .secondH .carrouselContainer .carrouselContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+#home .secondH .carrouselContainer .carrouselContent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+#home .secondH .chevronBL {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(219, 29, 29, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#home .secondH .chevronBL .fa-chevron-left {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transform: translateX(-1px);
+}
+#home .secondH .chevronBL:hover {
+  background-color: rgba(219, 29, 29, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+#home .secondH .chevronBL:hover .fa-chevron-left {
+  color: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15) translateX(-1px);
+}
+#home .secondH .chevronBR {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(219, 29, 29, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#home .secondH .chevronBR .fa-chevron-right {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transform: translateX(-1px);
+}
+#home .secondH .chevronBR:hover {
+  background-color: rgba(219, 29, 29, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+#home .secondH .chevronBR:hover .fa-chevron-right {
+  color: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15) translateX(-1px);
+}
+
+@media (max-width: 737px) {
+  #home {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    border: solid 5px red;
+  }
+  #home .firstH {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    border: solid 5px red;
+  }
+  #home .firstH .backgroundImg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  #home .firstH .backgroundImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(90deg) scale(1.35);
+    transform-origin: center;
+  }
+  #home .firstH .firstHContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+  }
+  #home .firstH .firstHContent .logoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 60%;
+  }
+  #home .firstH .firstHContent .logoContainer img {
+    width: 90%;
+  }
+  #home .firstH .firstHContent .sloganContainer {
+    height: fit-content;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 60%;
+  }
+  #home .firstH .firstHContent .sloganContainer img {
+    width: 100%;
+  }
+  #home .secondH {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+  }
+  #home .secondH .carrouselContainer {
+    height: 100%;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  #home .secondH .carrouselContainer .carrouselContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  #home .secondH .carrouselContainer .carrouselContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  #home .secondH .chevronBL {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(219, 29, 29, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #home .secondH .chevronBL .fa-chevron-left {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateX(-1px);
+  }
+  #home .secondH .chevronBL:hover {
+    background-color: rgba(219, 29, 29, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  #home .secondH .chevronBL:hover .fa-chevron-left {
+    color: rgba(255, 255, 255, 0.85);
+    transform: scale(1.15) translateX(-1px);
+  }
+  #home .secondH .chevronBR {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(219, 29, 29, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #home .secondH .chevronBR .fa-chevron-right {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateX(-1px);
+  }
+  #home .secondH .chevronBR:hover {
+    background-color: rgba(219, 29, 29, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  #home .secondH .chevronBR:hover .fa-chevron-right {
+    color: rgba(255, 255, 255, 0.85);
+    transform: scale(1.15) translateX(-1px);
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

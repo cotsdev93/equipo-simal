@@ -1,9 +1,15 @@
 body {
+  position: relative;
   header {
+    // display: none;
+    position: absolute;
+    // border: solid 3px red;
+    z-index: 2;
+    width: 100%;
     nav {
       width: 100%;
-      height: 80px;
-      background-color: $black;
+      height: 20vh;
+      // background-color: $black;
       display: flex;
       justify-content: space-between;
       padding: 0px 40px;
@@ -38,18 +44,11 @@ body {
         justify-content: center;
         align-items: center;
         gap: 40px;
-        ul {
-          display: flex;
-          gap: 10px;
-
-          li {
-            a {
-              color: $white;
-              letter-spacing: 2px;
-            }
-          }
+        .puchinball {
+          display: none;
         }
-        a {
+
+        .cart {
           text-decoration: none;
           .cartContainer {
             background-color: $white;
@@ -72,96 +71,104 @@ body {
 }
 @media (max-width: 737px) {
   body {
+    position: relative;
     header {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      // border: solid 5px red;
       nav {
         width: 100%;
-        height: 80px;
+        height: 20vh;
         display: flex;
         justify-content: space-between;
+        padding: 0px 20px;
         align-items: center;
-        position: relative;
-        padding: 0px;
+        // border: solid 1px red;
+
         .nav1 {
-          display: flex;
-          width: 100%;
-          height: 80px;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0px 20px;
-          z-index: 10;
-          background-color: $black;
           a {
             display: flex;
             justify-content: center;
             align-items: center;
-            transform: translateY(3px);
-
             .gloves {
               width: 40px;
               padding: -5px;
             }
-
             .wing {
               width: 25px;
               margin: 5px;
               transform: translateY(-10px);
             }
-
             span {
+              margin-left: 5px;
               font-size: 20px;
               color: $white;
+              letter-spacing: 2px;
+              display: none;
+            }
+          }
+          .fa-bars {
+            display: none;
+          }
+        }
+        .nav2 {
+          // display: block;
+          width: auto;
+          justify-content: center;
+          align-items: center;
+
+          position: relative;
+          .puchinball {
+            display: block;
+            width: 50px;
+            cursor: pointer;
+            img {
+              width: 100%;
             }
           }
 
-          .fa-bars {
-            display: block;
+          .comunidad {
+            // display: none;
+            position: absolute;
+            top: 160px;
+            right: -150px;
+            transition: all 0.5s ease-in-out;
             color: $white;
           }
-        }
+          .tienda {
+            // display: none;
+            position: absolute;
+            top: 130px;
+            right: -120px;
+            transition: all 0.5s ease-in-out;
+            color: $white;
+          }
 
-        .nav2 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 20px;
-          background-color: $black;
-          position: absolute;
-          right: -1px;
-          top: -160px;
-          width: 150px;
-          padding: 25px 0px;
-          z-index: 0;
-          transition: all 0.8s ease-in-out;
-          ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            li {
-              a {
-                color: $white;
+          .cart {
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 80px;
+            right: -150px;
+            .cartContainer {
+              background-color: $white;
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .fa-cart-shopping {
+                transform: translateX(-1px);
+                font-size: 20px;
+                color: $black;
               }
             }
           }
-
-          .cartContainer {
-            background-color: $white;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .fa-cart-shopping {
-              transform: translateX(-1px);
-              font-size: 20px;
-            }
+          .toggle {
+            right: 7px;
           }
-        }
-        .animation {
-          top: 80px;
         }
       }
     }
