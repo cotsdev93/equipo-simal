@@ -16,7 +16,8 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-X: hidden;
+  border: solid 5px blue;
 }
 
 /*# sourceMappingURL=variables.css.map */
