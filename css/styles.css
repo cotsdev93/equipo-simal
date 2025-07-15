@@ -15,6 +15,11 @@
   display: none;
 }
 
+html {
+  overflow: hidden;
+  border: solid 5px red;
+}
+
 body {
   position: relative;
   overflow: hidden;
@@ -621,7 +626,6 @@ body .productsContainer #products .productContainer .productSpecs {
   }
   #home .secondH .chevronBL:hover .fa-chevron-left {
     color: rgba(255, 255, 255, 0.85);
-    transform: scale(1.15) translateX(-1px);
   }
   #home .secondH .chevronBR {
     position: absolute;
@@ -652,7 +656,6 @@ body .productsContainer #products .productContainer .productSpecs {
   }
   #home .secondH .chevronBR:hover .fa-chevron-right {
     color: rgba(255, 255, 255, 0.85);
-    transform: scale(1.15) translateX(-1px);
   }
 }
 

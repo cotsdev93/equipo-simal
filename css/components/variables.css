@@ -15,6 +15,11 @@
   display: none;
 }
 
+html {
+  overflow: hidden;
+  border: solid 5px red;
+}
+
 body {
   position: relative;
   overflow: hidden;
