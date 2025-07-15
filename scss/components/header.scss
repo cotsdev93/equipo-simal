@@ -1,18 +1,97 @@
+header {
+  // display: none;
+  position: absolute;
+  // border: solid 3px red;
+  z-index: 2;
+  width: 50%;
+  nav {
+    width: 100%;
+    height: 20vh;
+    // background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    .nav1 {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .gloves {
+          width: 40px;
+          padding: -5px;
+        }
+        .wing {
+          width: 25px;
+          margin: 5px;
+          transform: translateY(-10px);
+        }
+        span {
+          margin-left: 5px;
+          font-size: 20px;
+          color: $white;
+          letter-spacing: 2px;
+          display: none;
+        }
+      }
+      .fa-bars {
+        display: none;
+      }
+    }
+    .nav2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      // border: solid 1px red;
+      .puchinball {
+        display: none;
+      }
+      .comunidad {
+        color: $white;
+        cursor: pointer;
+      }
+      .tienda {
+        color: $white;
+        cursor: pointer;
+      }
 
+      .cart {
+        text-decoration: none;
+        cursor: pointer;
+        .cartContainer {
+          background-color: $white;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .fa-cart-shopping {
+            transform: translateX(-1px);
+            font-size: 20px;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 737px) {
   header {
-    // display: none;
     position: absolute;
-    // border: solid 3px red;
     z-index: 2;
-    width: 50%;
+    width: 100%;
     nav {
       width: 100%;
       height: 20vh;
-      // background-color: $black;
       display: flex;
       justify-content: space-between;
       padding: 0px 20px;
       align-items: center;
+      // border: solid 1px red;
+
       .nav1 {
         a {
           display: flex;
@@ -40,26 +119,44 @@
         }
       }
       .nav2 {
-        display: flex;
+        // display: block;
+        width: auto;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        // border: solid 1px red;
+
+        position: relative;
         .puchinball {
-          display: none;
-        }
-        .comunidad {
-          color: $white;
+          display: block;
+          width: 50px;
           cursor: pointer;
+          img {
+            width: 100%;
+          }
+        }
+
+        .comunidad {
+          // display: none;
+          position: absolute;
+          top: 160px;
+          right: -150px;
+          transition: all 0.5s ease-in-out;
+          color: $white;
         }
         .tienda {
+          // display: none;
+          position: absolute;
+          top: 130px;
+          right: -120px;
+          transition: all 0.5s ease-in-out;
           color: $white;
-          cursor: pointer;
         }
 
         .cart {
           text-decoration: none;
-          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+          position: absolute;
+          top: 80px;
+          right: -150px;
           .cartContainer {
             background-color: $white;
             border-radius: 50%;
@@ -75,110 +172,8 @@
             }
           }
         }
-      }
-    }
-  }
-
-@media (max-width: 737px) {
-  body {
-    position: relative;
-    header {
-      position: absolute;
-      z-index: 2;
-      width: 100%;
-      // border: solid 5px red;
-      nav {
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        justify-content: space-between;
-        padding: 0px 20px;
-        align-items: center;
-        // border: solid 1px red;
-
-        .nav1 {
-          a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .gloves {
-              width: 40px;
-              padding: -5px;
-            }
-            .wing {
-              width: 25px;
-              margin: 5px;
-              transform: translateY(-10px);
-            }
-            span {
-              margin-left: 5px;
-              font-size: 20px;
-              color: $white;
-              letter-spacing: 2px;
-              display: none;
-            }
-          }
-          .fa-bars {
-            display: none;
-          }
-        }
-        .nav2 {
-          // display: block;
-          width: auto;
-          justify-content: center;
-          align-items: center;
-
-          position: relative;
-          .puchinball {
-            display: block;
-            width: 50px;
-            cursor: pointer;
-            img {
-              width: 100%;
-            }
-          }
-
-          .comunidad {
-            // display: none;
-            position: absolute;
-            top: 160px;
-            right: -150px;
-            transition: all 0.5s ease-in-out;
-            color: $white;
-          }
-          .tienda {
-            // display: none;
-            position: absolute;
-            top: 130px;
-            right: -120px;
-            transition: all 0.5s ease-in-out;
-            color: $white;
-          }
-
-          .cart {
-            text-decoration: none;
-            transition: all 0.5s ease-in-out;
-            position: absolute;
-            top: 80px;
-            right: -150px;
-            .cartContainer {
-              background-color: $white;
-              border-radius: 50%;
-              width: 35px;
-              height: 35px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              .fa-cart-shopping {
-                transform: translateX(-1px);
-                font-size: 20px;
-                color: $black;
-              }
-            }
-          }
-          .toggle {
-            right: 7px;
-          }
+        .toggle {
+          right: 7px;
         }
       }
     }

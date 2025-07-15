@@ -5,17 +5,23 @@
 }
 #home .firstH {
   width: 55%;
-  height: fit-content;
   position: relative;
   z-index: 1;
   transition: all 1s ease-in-out;
 }
-#home .firstH .backgroundImg {
-  height: fit-content;
-}
-#home .firstH .backgroundImg img {
+#home .firstH .backgroundImgContainer {
   width: 100%;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#home .firstH .backgroundImgContainer .backgroundImg {
+  width: 100%;
+  height: 100%;
+}
+#home .firstH .backgroundImgContainer .backgroundImgMobile {
+  display: none;
 }
 #home .firstH .firstHContent {
   display: flex;
@@ -142,35 +148,36 @@
   #home {
     width: 100%;
     height: 100vh;
-    display: block;
+    display: flex;
   }
   #home .firstH {
     width: 100%;
-    height: fit-content;
+    height: 50vh;
     position: relative;
     z-index: 1;
+    transition: all 1s ease-in-out;
   }
-  #home .firstH .backgroundImg {
-    width: auto;
+  #home .firstH .backgroundImgContainer {
     height: 100%;
-    position: relative;
-    border: solid 20px pink;
-  }
-  #home .firstH .backgroundImg img {
     width: 100%;
-    height: 100%;
+  }
+  #home .firstH .backgroundImgContainer .backgroundImg {
+    display: none;
+  }
+  #home .firstH .backgroundImgContainer .backgroundImgMobile {
+    height: auto;
+    width: 100%;
     object-fit: cover;
     object-position: center;
-    transform: rotate(90deg) scale(1.35);
+    display: block;
   }
   #home .firstH .firstHContent {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 55%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 5px;
@@ -180,29 +187,27 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    width: 60%;
   }
   #home .firstH .firstHContent .logoContainer img {
-    width: 90%;
+    width: 100%;
   }
   #home .firstH .firstHContent .sloganContainer {
     height: fit-content;
     display: flex;
     justify-items: center;
     align-items: center;
-    width: 60%;
   }
   #home .firstH .firstHContent .sloganContainer img {
     width: 100%;
   }
   #home .toggle {
-    transform: translateY(-110%);
+    transform: translateY(-120%);
   }
   #home .secondH {
     width: 100%;
-    height: 50vh;
+    height: 50%;
     position: absolute;
-    right: 0;
+    bottom: 0;
   }
   #home .secondH .carrouselContainer {
     width: 100%;
@@ -224,7 +229,7 @@
   }
   #home .secondH .chevronBL {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 10px;
     transform: translateY(-50%);
     width: 25px;
@@ -257,7 +262,7 @@
   }
   #home .secondH .chevronBR {
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 10px;
     transform: translateY(-50%);
     width: 25px;
