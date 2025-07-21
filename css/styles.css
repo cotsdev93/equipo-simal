@@ -720,7 +720,7 @@ body .productsContainer #products .productContainer .productSpecs {
 #comunidad .firstC .firstCContent .sloganContainer img {
   width: 100%;
 }
-#comunidad .toggleC {
+#comunidad .toggle {
   transform: translateX(0%);
 }
 #comunidad .secondC {
