@@ -4,7 +4,7 @@
   display: flex;
 }
 #home .firstH {
-  width: 55%;
+  width: 53%;
   position: relative;
   z-index: 1;
   transition: all 1s ease-in-out;
@@ -177,7 +177,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 5px;
@@ -201,7 +201,7 @@
     width: 100%;
   }
   #home .toggle {
-    transform: translateY(-120%);
+    transform: translateY(-127%);
   }
   #home .secondH {
     width: 100%;

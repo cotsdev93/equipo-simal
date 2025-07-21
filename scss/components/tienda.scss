@@ -1,0 +1,128 @@
+#tienda {
+  width: 53%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  // border: solid 5px red;
+  .firstT {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    transform: translateX(-100%);
+    .backgroundImgContainer {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      // border: solid 4px red;
+      .backgroundImg {
+        width: 100%;
+        height: 100%;
+      }
+      .backgroundImgMobile {
+        display: none;
+      }
+    }
+    .firstTContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      gap: 5px;
+      p {
+        color: white;
+      }
+      .logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        img {
+          width: 90%;
+        }
+      }
+      .sloganContainer {
+        height: fit-content;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .toggle {
+    transform: translateX(0%);
+  }
+  .secondT {
+    width: 50%;
+    height: 100%;
+    border: solid 5px blue;
+    position: absolute;
+    right: 0;
+    display: none;
+  }
+}
+
+@media (max-width: 737px) {
+    #tienda {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      .firstT {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        z-index: 1;
+        transition: all 1s ease-in-out;
+        transform: translateY(-125%);
+        .backgroundImgContainer {
+          // border: solid 2px red;
+          height: 100%;
+          width: 100%;
+  
+          .backgroundImg {
+            display: none;
+          }
+          .backgroundImgMobile {
+            height: auto;
+            width: 100%;
+            // transform: rotate(90deg);
+            // opacity:0;
+            object-fit: cover;
+            object-position: center;
+  
+            display: block;
+          }
+        }
+        .firstTContent {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 65%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          gap: 5px;
+        }
+      }
+      .toggle {
+        transform: translateY(-3%);
+      }
+      .secondT {
+      }
+    }
+  }
+  

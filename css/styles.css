@@ -17,7 +17,6 @@
 
 html {
   overflow: hidden;
-  border: solid 5px red;
 }
 
 body {
@@ -372,7 +371,7 @@ body .productsContainer #products .productContainer .productSpecs {
   display: flex;
 }
 #home .firstH {
-  width: 55%;
+  width: 53%;
   position: relative;
   z-index: 1;
   transition: all 1s ease-in-out;
@@ -545,7 +544,7 @@ body .productsContainer #products .productContainer .productSpecs {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 5px;
@@ -569,7 +568,7 @@ body .productsContainer #products .productContainer .productSpecs {
     width: 100%;
   }
   #home .toggle {
-    transform: translateY(-120%);
+    transform: translateY(-127%);
   }
   #home .secondH {
     width: 100%;
@@ -656,6 +655,242 @@ body .productsContainer #products .productContainer .productSpecs {
   }
   #home .secondH .chevronBR:hover .fa-chevron-right {
     color: rgba(255, 255, 255, 0.85);
+  }
+}
+#comunidad {
+  width: 53%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+#comunidad .firstC {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  transform: translateX(-100%);
+}
+#comunidad .firstC .backgroundImgContainer {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#comunidad .firstC .backgroundImgContainer .backgroundImg {
+  width: 100%;
+  height: 100%;
+}
+#comunidad .firstC .backgroundImgContainer .backgroundImgMobile {
+  display: none;
+}
+#comunidad .firstC .firstCContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 5px;
+}
+#comunidad .firstC .firstCContent p {
+  color: white;
+}
+#comunidad .firstC .firstCContent .logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+#comunidad .firstC .firstCContent .logoContainer img {
+  width: 90%;
+}
+#comunidad .firstC .firstCContent .sloganContainer {
+  height: fit-content;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#comunidad .firstC .firstCContent .sloganContainer img {
+  width: 100%;
+}
+#comunidad .toggleC {
+  transform: translateX(0%);
+}
+#comunidad .secondC {
+  width: 50%;
+  height: 100%;
+  border: solid 5px blue;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+@media (max-width: 737px) {
+  #comunidad {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  #comunidad .firstC {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    transform: translateY(-110%);
+  }
+  #comunidad .firstC .backgroundImgContainer {
+    height: 100%;
+    width: 100%;
+  }
+  #comunidad .firstC .backgroundImgContainer .backgroundImg {
+    display: none;
+  }
+  #comunidad .firstC .backgroundImgContainer .backgroundImgMobile {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  #comunidad .firstC .firstCContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+  }
+  #comunidad .toggle {
+    transform: translateY(-3%);
+  }
+}
+#tienda {
+  width: 53%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+#tienda .firstT {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  transform: translateX(-100%);
+}
+#tienda .firstT .backgroundImgContainer {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#tienda .firstT .backgroundImgContainer .backgroundImg {
+  width: 100%;
+  height: 100%;
+}
+#tienda .firstT .backgroundImgContainer .backgroundImgMobile {
+  display: none;
+}
+#tienda .firstT .firstTContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 5px;
+}
+#tienda .firstT .firstTContent p {
+  color: white;
+}
+#tienda .firstT .firstTContent .logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+#tienda .firstT .firstTContent .logoContainer img {
+  width: 90%;
+}
+#tienda .firstT .firstTContent .sloganContainer {
+  height: fit-content;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#tienda .firstT .firstTContent .sloganContainer img {
+  width: 100%;
+}
+#tienda .toggle {
+  transform: translateX(0%);
+}
+#tienda .secondT {
+  width: 50%;
+  height: 100%;
+  border: solid 5px blue;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+@media (max-width: 737px) {
+  #tienda {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  #tienda .firstT {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    transform: translateY(-125%);
+  }
+  #tienda .firstT .backgroundImgContainer {
+    height: 100%;
+    width: 100%;
+  }
+  #tienda .firstT .backgroundImgContainer .backgroundImg {
+    display: none;
+  }
+  #tienda .firstT .backgroundImgContainer .backgroundImgMobile {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  #tienda .firstT .firstTContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+  }
+  #tienda .toggle {
+    transform: translateY(-3%);
   }
 }
 
