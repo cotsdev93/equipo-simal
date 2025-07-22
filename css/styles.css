@@ -24,7 +24,36 @@ body {
   overflow: hidden;
   width: 100vw;
 }
+body .ma {
+  position: absolute;
+  width: 50%;
+}
+body .ma .maImg {
+  width: 100%;
+}
+body .ma .maMobileImg {
+  display: none;
+}
 
+@media (max-width: 737px) {
+  body {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+  }
+  body .ma {
+    position: absolute;
+    width: 100%;
+  }
+  body .ma .maImg {
+    display: none;
+  }
+  body .ma .maMobileImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
 header {
   position: absolute;
   z-index: 2;
