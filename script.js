@@ -1,20 +1,26 @@
 ///////////////////////////////////// MENU
 
+const logo = document.querySelector(".logo")
 const puchinballBtn = document.querySelector(".puchinball");
 const cart = document.querySelector(".cart");
 const comunidad = document.querySelector(".comunidad");
 const tienda = document.querySelector(".tienda");
 const firstH = document.querySelector(".firstH");
 const secondH = document.querySelector(".secondH");
-const firstC = document.querySelector(".firstC")
-const secondC = document.querySelector(".secondC")
-const firstT = document.querySelector(".firstT")
+const firstC = document.querySelector(".firstC");
+const secondC = document.querySelector(".secondC");
+const firstT = document.querySelector(".firstT");
+const sections = document.querySelectorAll(".section");
 
 const mobile = window.matchMedia("(max-width: 768px)").matches;
 
 puchinballBtn.addEventListener("click", () => {
   puchinball();
 });
+
+logo.addEventListener("click", ()=>{
+  setActiveSection(firstH)
+})
 
 function puchinball() {
   cart.classList.toggle("toggle");
@@ -26,23 +32,32 @@ function puchinball() {
   }, 300);
 }
 
-tienda.addEventListener("click", () => {
-  firstH.classList.toggle("toggle");
-  secondH.classList.toggle("opacity");
-  firstT.classList.toggle("toggle")
+comunidad.addEventListener("click", () => {
+  setActiveSection(firstC);
   if (mobile) {
     puchinball();
   }
 });
 
-comunidad.addEventListener("click", () => {
-  firstH.classList.toggle("toggle");
-  secondH.classList.toggle("opacity");
-  firstC.classList.toggle("toggle")
+tienda.addEventListener("click", () => {
+  setActiveSection(firstT);
   if (mobile) {
     puchinball();
   }
 });
+
+function setActiveSection(sectionToShow) {
+  sections.forEach((section) => {
+    section.classList.remove("active"); // saca active a todas
+    section.style.transform = "translateX(-100%)"; // manda a la izquierda
+    if (mobile) {
+      section.style.transform = "translateY(-130%)"; // manda a la izquierda
+    }
+  });
+
+  sectionToShow.classList.add("active"); // pone active a la nueva
+  sectionToShow.style.transform = "translateX(0%)"; // entra desde la izquierda
+}
 
 ///////////////////////////////////// CARROUSEL HOME
 

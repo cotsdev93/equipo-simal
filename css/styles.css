@@ -42,6 +42,7 @@ header nav .nav1 a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 header nav .nav1 a .gloves {
   width: 40px;
