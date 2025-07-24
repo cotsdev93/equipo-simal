@@ -479,7 +479,7 @@ body .productsContainer #products .productContainer .productSpecs {
 #home .secondH .chevronBL {
   position: absolute;
   top: 50%;
-  left: 45px;
+  left: 30px;
   transform: translateY(-50%);
   width: 25px;
   height: 25px;
@@ -548,10 +548,11 @@ body .productsContainer #products .productContainer .productSpecs {
     display: flex;
   }
   #home .firstH {
+    border: solid 5px rgb(77, 255, 0);
     width: 100%;
     height: 50vh;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     transition: all 1s ease-in-out;
   }
   #home .firstH .backgroundImgContainer {
@@ -605,6 +606,7 @@ body .productsContainer #products .productContainer .productSpecs {
     height: 50%;
     position: absolute;
     bottom: 0;
+    z-index: 1;
   }
   #home .secondH .carrouselContainer {
     width: 100%;
