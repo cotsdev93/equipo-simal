@@ -91,7 +91,7 @@
     .chevronBL {
       position: absolute;
       top: 50%;
-      left: 30px;
+      left: 25px;
       transform: translateY(-50%);
       width: 25px;
       height: 25px;
@@ -167,13 +167,12 @@
     height: 100vh;
     display: flex;
     .firstH {
-      border: solid 5px rgb(77, 255, 0);
       width: 100%;
       height: 50vh;
       position: relative;
-      z-index: 2;
+      z-index: 1;
       transition: all 1s ease-in-out;
-      // opacity: 0;
+
       .backgroundImgContainer {
         height: 100%;
         width: 100%;
@@ -229,8 +228,6 @@
       height: 50%;
       position: absolute;
       bottom: 0;
-      z-index: 1  ;
-      // border: solid 5px red;
       .carrouselContainer {
         width: 100%;
         height: 100%;

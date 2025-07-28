@@ -60,20 +60,13 @@ header {
       .cart {
         text-decoration: none;
         cursor: pointer;
-        .cartContainer {
-          background-color: $white;
-          border-radius: 50%;
-          width: 35px;
-          height: 35px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        
           .fa-cart-shopping {
             transform: translateX(-1px);
             font-size: 20px;
-            color: $black;
+            color: $white;
           }
-        }
+        
       }
     }
   }

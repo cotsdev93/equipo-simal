@@ -2,7 +2,7 @@
 
 const logo = document.querySelector(".logo")
 const puchinballBtn = document.querySelector(".puchinball");
-const cart = document.querySelector(".cart");
+const cartB = document.querySelector(".cart");
 const comunidad = document.querySelector(".comunidad");
 const tienda = document.querySelector(".tienda");
 const firstH = document.querySelector(".firstH");
@@ -10,6 +10,7 @@ const secondH = document.querySelector(".secondH");
 const firstC = document.querySelector(".firstC");
 const secondC = document.querySelector(".secondC");
 const firstT = document.querySelector(".firstT");
+const firstCart = document.querySelector(".firstCart")
 const sections = document.querySelectorAll(".section");
 
 const mobile = window.matchMedia("(max-width: 768px)").matches;
@@ -23,7 +24,7 @@ logo.addEventListener("click", ()=>{
 })
 
 function puchinball() {
-  cart.classList.toggle("toggle");
+  cartB.classList.toggle("toggle");
   setTimeout(() => {
     tienda.classList.toggle("toggle");
   }, 150);
@@ -45,6 +46,13 @@ tienda.addEventListener("click", () => {
     puchinball();
   }
 });
+
+cartB.addEventListener("click", ()=>{
+  setActiveSection(firstCart);
+  if (mobile) {
+    puchinball();
+  }
+})
 
 function setActiveSection(sectionToShow) {
   sections.forEach((section) => {
