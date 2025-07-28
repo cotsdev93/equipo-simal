@@ -56,7 +56,7 @@ body .ma .maMobileImg {
 }
 header {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 50%;
 }
 header nav {
@@ -218,7 +218,7 @@ header nav .nav2 .cart .fa-cart-shopping {
 #home .firstH {
   width: 53%;
   position: relative;
-  z-index: 1;
+  z-index: 4;
   transition: all 1s ease-in-out;
 }
 #home .firstH .backgroundImgContainer {
@@ -506,7 +506,7 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 0;
+  z-index: 3;
   top: 0;
   left: 0;
   display: flex;
@@ -624,7 +624,7 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 0;
+  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
@@ -633,7 +633,7 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
 }
@@ -741,7 +741,7 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   top: 0;
   left: 0;
   display: flex;
@@ -749,7 +749,6 @@ header nav .nav2 .cart .fa-cart-shopping {
 #cart .firstCart {
   width: 95%;
   height: 100%;
-  z-index: 1;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
   display: flex;
@@ -794,6 +793,9 @@ header nav .nav2 .cart .fa-cart-shopping {
   justify-content: center;
   align-items: center;
 }
+#cart .firstCart .firstCartContent .cartContent {
+  height: 100%;
+}
 
 @media (max-width: 737px) {
   #cart {
@@ -804,7 +806,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   #cart .firstCart {
     width: 100%;
     height: 50vh;
-    z-index: 1;
     transition: all 1s ease-in-out;
     transform: translateY(-100%);
   }
@@ -818,7 +819,7 @@ header nav .nav2 .cart .fa-cart-shopping {
     overflow: hidden;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.026);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);

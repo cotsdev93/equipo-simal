@@ -2,7 +2,7 @@
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 0;
+  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     transition: all 1s ease-in-out;
     transform: translateX(-100%);
     .backgroundImgContainer {

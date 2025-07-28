@@ -2,14 +2,14 @@
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   top: 0;
   left: 0;
   display: flex;
   .firstCart {
     width: 95%;
     height: 100%;
-    z-index: 1;
+    // z-index: 10;
     transition: all 1s ease-in-out;
     transform: translateX(-100%);
     display: flex;
@@ -53,6 +53,9 @@
           align-items: center;
         }
       }
+      .cartContent {
+        height: 100%;
+      }
     }
   }
 }
@@ -66,7 +69,7 @@
     .firstCart {
       width: 100%;
       height: 50vh;
-      z-index: 1;
+      // z-index: 1;
       transition: all 1s ease-in-out;
       transform: translateY(-100%);
       .firstCartContent {
@@ -79,7 +82,7 @@
         overflow: hidden;
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.026);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
