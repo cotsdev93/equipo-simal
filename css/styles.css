@@ -122,7 +122,6 @@ header nav .nav2 .cart .fa-cart-shopping {
 @media (max-width: 737px) {
   header {
     position: absolute;
-    z-index: 2;
     width: 100%;
   }
   header nav {
@@ -506,7 +505,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 3;
   top: 0;
   left: 0;
   display: flex;
@@ -515,9 +513,11 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
+  overflow: hidden;
+  cursor: pointer;
 }
 #comunidad .firstC .backgroundImgContainer {
   width: 100%;
@@ -624,7 +624,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
@@ -636,6 +635,9 @@ header nav .nav2 .cart .fa-cart-shopping {
   z-index: 2;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 #tienda .firstT .backgroundImgContainer {
   width: 100%;
@@ -652,36 +654,28 @@ header nav .nav2 .cart .fa-cart-shopping {
   display: none;
 }
 #tienda .firstT .firstTContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  gap: 5px;
-}
-#tienda .firstT .firstTContent p {
-  color: white;
-}
-#tienda .firstT .firstTContent .logoContainer {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
-#tienda .firstT .firstTContent .logoContainer img {
   width: 90%;
-}
-#tienda .firstT .firstTContent .sloganContainer {
   height: fit-content;
+  margin-top: 25vh;
+  max-height: 70vh;
   display: flex;
-  justify-items: center;
-  align-items: center;
+  justify-content: center;
 }
-#tienda .firstT .firstTContent .sloganContainer img {
+#tienda .firstT .firstTContent form {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#tienda .firstT .firstTContent form .buscador {
+  cursor: pointer;
+  padding-left: 10px;
+  border-radius: 20px;
+  width: 80%;
+  height: 25px;
+  border: none;
+  letter-spacing: 0.7px;
+  z-index: 2;
 }
 #tienda .toggle {
   transform: translateX(0%);
@@ -741,7 +735,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
   display: flex;
@@ -749,6 +742,7 @@ header nav .nav2 .cart .fa-cart-shopping {
 #cart .firstCart {
   width: 95%;
   height: 100%;
+  z-index: 1;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
   display: flex;
@@ -768,6 +762,8 @@ header nav .nav2 .cart .fa-cart-shopping {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  color: #f5f5f5;
+  cursor: pointer;
 }
 #cart .firstCart .firstCartContent .cartHeader {
   width: 100%;
@@ -775,7 +771,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   font-size: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding: 5px 0px;
-  color: #f5f5f5;
 }
 #cart .firstCart .firstCartContent .cartHeader .producto {
   text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.7);

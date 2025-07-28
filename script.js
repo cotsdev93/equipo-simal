@@ -1,6 +1,6 @@
 ///////////////////////////////////// MENU
 
-const logo = document.querySelector(".logo")
+const logo = document.querySelector(".logo");
 const puchinballBtn = document.querySelector(".puchinball");
 const cartB = document.querySelector(".cart");
 const comunidad = document.querySelector(".comunidad");
@@ -10,18 +10,19 @@ const secondH = document.querySelector(".secondH");
 const firstC = document.querySelector(".firstC");
 const secondC = document.querySelector(".secondC");
 const firstT = document.querySelector(".firstT");
-const firstCart = document.querySelector(".firstCart")
+const firstCart = document.querySelector(".firstCart");
 const sections = document.querySelectorAll(".section");
 
 const mobile = window.matchMedia("(max-width: 768px)").matches;
 
 puchinballBtn.addEventListener("click", () => {
   puchinball();
+  console.log("funca  ");
 });
 
-logo.addEventListener("click", ()=>{
-  setActiveSection(firstH)
-})
+logo.addEventListener("click", () => {
+  setActiveSection(firstH);
+});
 
 function puchinball() {
   cartB.classList.toggle("toggle");
@@ -47,17 +48,18 @@ tienda.addEventListener("click", () => {
   }
 });
 
-cartB.addEventListener("click", ()=>{
+cartB.addEventListener("click", () => {
   setActiveSection(firstCart);
   if (mobile) {
     puchinball();
   }
-})
+});
 
 function setActiveSection(sectionToShow) {
   sections.forEach((section) => {
     section.classList.remove("active"); // saca active a todas
     section.style.transform = "translateX(-100%)"; // manda a la izquierda
+
     if (mobile) {
       section.style.transform = "translateY(-130%)"; // manda a la izquierda
     }

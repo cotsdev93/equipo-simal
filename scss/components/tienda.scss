@@ -2,11 +2,10 @@
   width: 53%;
   height: 100vh;
   position: absolute;
-  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
-  // border: solid 5px red;
+  // border: solid 1px red;
   .firstT {
     width: 100%;
     height: 100%;
@@ -14,6 +13,10 @@
     z-index: 2;
     transition: all 1s ease-in-out;
     transform: translateX(-100%);
+    overflow: hidden;
+    // border: solid 5px red;
+    display: flex;
+    justify-content: center;
     .backgroundImgContainer {
       width: 100%;
       position: absolute;
@@ -30,34 +33,27 @@
       }
     }
     .firstTContent {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       position: absolute;
-      top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      gap: 5px;
-      p {
-        color: white;
-      }
-      .logoContainer {
+      width: 90%;
+      height: fit-content;
+      margin-top: 25vh;
+      // border: solid 4px pink;
+      max-height: 70vh;
+      display: flex;
+      justify-content: center;
+      form {
+        width: 100%;
+        // border: solid 1px red;
         display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        img {
-          width: 90%;
-        }
-      }
-      .sloganContainer {
-        height: fit-content;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        img {
-          width: 100%;
+        justify-content: center;
+        .buscador {
+          cursor: pointer;
+          padding-left: 10px;
+          border-radius: 20px;
+          width: 80%;
+          height: 25px;
+          border: none;
+          letter-spacing: 0.7px;    z-index: 2;
         }
       }
     }
@@ -121,6 +117,5 @@
     .toggle {
       transform: translateY(-3%);
     }
-
   }
 }
