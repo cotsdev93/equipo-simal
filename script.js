@@ -71,7 +71,6 @@ function setActiveSection(sectionToShow) {
 
 ///////////////////////////////////// CARROUSEL HOME
 
-// Selecciona los elementos del carrusel
 const carrouselContent = document.querySelector(".carrouselContent");
 const carrouselImgs = carrouselContent
   ? carrouselContent.querySelectorAll("img")
@@ -98,7 +97,6 @@ function scrollToImg(idx) {
 let currentIdx = 0;
 const maxIdx = carrouselImgs.length - 1;
 
-// Botón derecha
 chevronRight?.addEventListener("click", () => {
   if (currentIdx < maxIdx) {
     currentIdx++;
@@ -106,7 +104,6 @@ chevronRight?.addEventListener("click", () => {
   }
 });
 
-// Botón izquierda
 chevronLeft?.addEventListener("click", () => {
   if (currentIdx > 0) {
     currentIdx--;
@@ -114,7 +111,6 @@ chevronLeft?.addEventListener("click", () => {
   }
 });
 
-// Sincroniza el índice al hacer scroll manual
 carrouselContent?.addEventListener("scroll", () => {
   const imgWidth = getImgWidth();
   // Encuentra el índice más cercano al scroll actual
@@ -122,7 +118,48 @@ carrouselContent?.addEventListener("scroll", () => {
   if (idx !== currentIdx) currentIdx = idx;
 });
 
-// Opcional: Ajusta el scroll al hacer resize para mantener la imagen centrada
 window.addEventListener("resize", () => {
   scrollToImg(currentIdx);
 });
+
+///////////////////////////////////// TIENDA
+class BaseDeDatosProductos {
+  constructor() {
+    this.productos = [];
+    this.cargarProductos();
+  }
+
+  async cargarProductos() {
+    try {
+      const resultado = await fetch("./data/products.json");
+      if (!resultado.ok) throw new Error("Error al cargar productos");
+
+      this.productos = await resultado.json();
+      this.renderizarProductos(this.productos);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  renderizarProductos(productos) {
+    const productosElement = document.querySelector(".productosContainer");
+    let html = "";
+
+    for (const producto of productos) {
+      html += `
+        <div class="productoContainer">
+          <div class="imgContainer">
+            <img src="${producto.img}" alt="${producto.name}">
+          </div>
+          <div class="infoContainer">
+
+          </div>
+        </div>
+      `;
+    }
+
+    productosElement.innerHTML = html;
+  }
+}
+
+new BaseDeDatosProductos();

@@ -365,7 +365,6 @@ header nav .nav2 .cart .fa-cart-shopping {
     width: 100%;
     height: 50vh;
     position: relative;
-    z-index: 1;
     transition: all 1s ease-in-out;
   }
   #home .firstH .backgroundImgContainer {
@@ -516,7 +515,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   z-index: 3;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
-  overflow: hidden;
   cursor: pointer;
 }
 #comunidad .firstC .backgroundImgContainer {
@@ -635,7 +633,6 @@ header nav .nav2 .cart .fa-cart-shopping {
   z-index: 2;
   transition: all 1s ease-in-out;
   transform: translateX(-100%);
-  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -660,14 +657,21 @@ header nav .nav2 .cart .fa-cart-shopping {
   margin-top: 25vh;
   max-height: 70vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-#tienda .firstT .firstTContent form {
+#tienda .firstT .firstTContent .buscadorContainer {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-#tienda .firstT .firstTContent form .buscador {
+#tienda .firstT .firstTContent .buscadorContainer form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#tienda .firstT .firstTContent .buscadorContainer form .buscador {
   cursor: pointer;
   padding-left: 10px;
   border-radius: 20px;
@@ -675,7 +679,63 @@ header nav .nav2 .cart .fa-cart-shopping {
   height: 25px;
   border: none;
   letter-spacing: 0.7px;
-  z-index: 2;
+  opacity: 0.8;
+  outline: none;
+}
+#tienda .firstT .firstTContent .buscadorContainer form .buscador:focus {
+  opacity: 1;
+}
+#tienda .firstT .firstTContent .categoriasContainer {
+  width: 80%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+#tienda .firstT .firstTContent .categoriasContainer .categorias {
+  display: flex;
+  justify-content: space-between;
+}
+#tienda .firstT .firstTContent .categoriasContainer .categorias li {
+  list-style: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+#tienda .firstT .firstTContent .categoriasContainer .categorias li:hover {
+  opacity: 1;
+}
+#tienda .firstT .firstTContent .productosContainer {
+  width: 85%;
+  border: solid 1px rgb(71, 71, 71);
+  height: 100%;
+  min-height: 40vh;
+  max-height: 50vh;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  backdrop-filter: blur(1px);
+}
+#tienda .firstT .firstTContent .productosContainer .productoContainer {
+  width: 100px;
+  height: 110px;
+  border: solid 1px red;
+  margin: 5px;
+}
+#tienda .firstT .firstTContent .productosContainer .productoContainer .imgContainer {
+  width: 100%;
+  height: 80%;
+  border: solid 1px blue;
+}
+#tienda .firstT .firstTContent .productosContainer .productoContainer .imgContainer img {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+#tienda .firstT .firstTContent .productosContainer .productoContainer .infoContainer {
+  width: 100%;
+  height: 20%;
+  background-color: blue;
 }
 #tienda .toggle {
   transform: translateX(0%);
@@ -698,7 +758,6 @@ header nav .nav2 .cart .fa-cart-shopping {
     width: 100%;
     height: 50vh;
     position: relative;
-    z-index: 1;
     transition: all 1s ease-in-out;
     transform: translateY(-125%);
   }
@@ -814,7 +873,7 @@ header nav .nav2 .cart .fa-cart-shopping {
     overflow: hidden;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.026);
-    backdrop-filter: blur(px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);

@@ -1,27 +1,47 @@
 [
-    
-    {
-        "id": 1,
-        "name": "Guantes de Boxeo",
-        "category": "accesorios",
-        "subcategory": "guantes",
-        "price": 89.99,
-        "currency": "$",
-        "description": "Guantes de boxeo profesionales con protección superior y durabilidad excepcional.",
-        "shortDescription": "Guantes profesionales de boxeo",
-        "brand": "Equipo Simal",
-        "img": "./assets/img/products/guantes.png"
-    },
-    {
-        "id": 3,
-        "name": "Guantes de Boxeo ",
-        "category": "accesorios",
-        "subcategory": "guantes",
-        "price": 89.99,
-        "currency": "$",
-        "description": "Guantes de boxeo profesionales con protección superior y durabilidad excepcional.",
-        "shortDescription": "Guantes profesionales de boxeo",
-        "brand": "Equipo Simal",
-        "img": "./assets/img/products/guantes.png"
-    }
+  {
+    "id": 1,
+    "name": "Guantes de Boxeo",
+    "category": "accesorios",
+    "subcategory": "guantes",
+    "price": 89.99,
+    "currency": "$",
+    "description": "Guantes de boxeo profesionales con protección superior y durabilidad excepcional.",
+    "shortDescription": "Guantes profesionales de boxeo",
+    "brand": "Equipo Simal",
+    "img": "./assets/img/products/guantes.png"
+  },  {
+    "id": 1,
+    "name": "Guantes de Boxeo",
+    "category": "accesorios",
+    "subcategory": "guantes",
+    "price": 89.99,
+    "currency": "$",
+    "description": "Guantes de boxeo profesionales con protección superior y durabilidad excepcional.",
+    "shortDescription": "Guantes profesionales de boxeo",
+    "brand": "Equipo Simal",
+    "img": "./assets/img/products/guantes.png"
+  },  {
+    "id": 1,
+    "name": "Guantes de Boxeo",
+    "category": "accesorios",
+    "subcategory": "guantes",
+    "price": 89.99,
+    "currency": "$",
+    "description": "Guantes de boxeo profesionales con protección superior y durabilidad excepcional.",
+    "shortDescription": "Guantes profesionales de boxeo",
+    "brand": "Equipo Simal",
+    "img": "./assets/img/products/guantes.png"
+  },  {
+    "id": 1,
+    "name": "Guantes de Boxeo",
+    "category": "accesorios",
+    "subcategory": "guantes",
+    "price": 89.99,
+    "currency": "$",
+    "description": "Guantes de boxeo profesionales con protección superior y durabilidad excepcional.",
+    "shortDescription": "Guantes profesionales de boxeo",
+    "brand": "Equipo Simal",
+    "img": "./assets/img/products/guantes.png"
+  }
 ]
