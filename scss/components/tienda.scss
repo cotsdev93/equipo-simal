@@ -1,29 +1,26 @@
 #tienda {
-  width: 53%;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
-  // border: solid 1px red;
   .firstT {
-    width: 100%;
+    width: 53%;
     height: 100%;
     position: relative;
     z-index: 2;
     transition: all 1s ease-in-out;
     transform: translateX(-100%);
-    // overflow: hidden;
-    // border: solid 5px red;
     display: flex;
     justify-content: center;
+    border: solid 1px red;
     .backgroundImgContainer {
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 0;
-      // border: solid 4px red;
       .backgroundImg {
         width: 100%;
         height: 100%;
@@ -36,8 +33,7 @@
       position: absolute;
       width: 90%;
       height: fit-content;
-      margin-top: 25vh;
-      // border: solid 4px pink;
+      margin-top: 21vh;
       max-height: 70vh;
       display: flex;
       flex-direction: column;
@@ -45,13 +41,10 @@
       align-items: center;
       .buscadorContainer {
         width: 100%;
-        // border: solid 1px red;
         display: flex;
         justify-content: center;
-        // border: solid 1px red;
         form {
           width: 100%;
-          // border: solid 1px red;
           display: flex;
           justify-content: center;
           .buscador {
@@ -64,9 +57,7 @@
             letter-spacing: 0.7px;
             opacity: 0.8;
             outline: none;
-            &:focus {
-              opacity: 1;
-            }
+            &:focus { opacity: 1; }
           }
         }
       }
@@ -84,9 +75,7 @@
             cursor: pointer;
             opacity: 0.7;
             transition: all 0.3s ease-in-out;
-            &:hover {
-              opacity: 1;
-            }
+            &:hover { opacity: 1; }
           }
         }
       }
@@ -94,49 +83,192 @@
         width: 85%;
         border: solid 1px rgb(71, 71, 71);
         height: 100%;
-        min-height: 40vh;
-        max-height: 50vh;
         border-radius: 10px;
         padding: 10px;
         display: flex;
-        backdrop-filter: blur(1px);
-        // -webkit-backdrop-filter: blur(20px);
+        overflow: auto;
+
+        &::-webkit-scrollbar { width: 6px; height: 6px; }
+        &::-webkit-scrollbar-track { background: transparent; border-radius: 3px; }
+        &::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 3px;
+          transition: background 0.2s ease;
+          &:hover { background: rgba(255, 255, 255, 0.5); }
+          &:active { background: rgba(255, 255, 255, 0.7); }
+        }
+        &::-webkit-scrollbar-corner { background: transparent; }
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+
         .productoContainer {
-          width: 100px;
-          height: 110px;
-          border: solid 1px red;
+          width: 50%;
+          height: 100%;
+          border: solid 1px rgb(71, 71, 71);
           margin: 5px;
+          border-radius: 2px;
+          cursor: pointer;
           .imgContainer {
             width: 100%;
             height: 80%;
-            border: solid 1px blue;
-            img {
-              width: 100%;
-              height: 100%;
-              background-color: red;
-            }
+            img { width: 100%; height: 100%; }
           }
-          .infoContainer{
+          .infoContainer {
             width: 100%;
             height: 20%;
-            background-color: blue;
+            border-top: 1px solid rgb(71, 71, 71);
+            .nombreProducto {
+              color: $white;
+              padding-left: 2px;
+            }
           }
+        }
+        .precioContainer {
+          display: flex;
+          justify-content: flex-end;
+          .precio { color: green; padding: 0px 2px; }
         }
       }
     }
   }
-  .toggle {
-    transform: translateX(0%);
-  }
+  .toggle { transform: translateX(0%); }
+
+  /* secondT ahora actúa como panel de detalle */
   .secondT {
     width: 50%;
     height: 100%;
-    border: solid 5px blue;
+    // border: solid 5px blue;
+    backdrop-filter: blur(5px);
     position: absolute;
-    right: 0;
-    display: none;
+    right: 0px;
+    
+    /* visible sólo cuando hay producto seleccionado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity 220ms ease, transform 280ms cubic-bezier(.2,.7,.2,1), visibility 0s linear 280ms;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 220ms ease, transform 280ms cubic-bezier(.2,.7,.2,1), visibility 0s;
+    }
+
+    /* tarjeta interna tipo “Apple” */
+    .productPanel {
+      width: min(900px, 92%);
+      max-height: 88vh;
+      overflow: hidden;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      position: relative;
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+      transition: transform 280ms cubic-bezier(.2,.7,.2,1), opacity 280ms ease;
+      background-color: white;
+    }
+    &.open .productPanel { opacity: 1; transform: translateY(0) scale(1); }
+
+    .panelClose {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 999px;
+      font-size: 26px;
+      line-height: 1;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: transform 160ms ease, background 160ms ease, opacity 160ms ease;
+      &:hover { transform: scale(1.05); background: rgba(255,255,255,0.22); }
+      &:active { transform: scale(0.98); }
+    }
+
+    .panelBody {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      padding: 22px;
+    }
+
+    .panelImg {
+      aspect-ratio: 1 / 1;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      img { width: 100%; height: 100%; object-fit: contain; transform: translateZ(0); }
+    }
+
+    .panelInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      color: $white;
+
+      .panelTitle {
+        font-size: clamp(20px, 2.6vw, 28px);
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+
+      .panelDesc {
+        opacity: 0.9;
+        line-height: 1.45;
+        max-height: 32vh;
+        overflow: auto;
+        scrollbar-width: thin;
+      }
+
+      .panelPrice {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        background: linear-gradient(90deg, #b0ffb0, #d8ffd8);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .panelActions {
+        margin-top: auto;
+        display: flex;
+        gap: 10px;
+
+        .btnPrimary {
+          appearance: none;
+          border: 0;
+          cursor: pointer;
+          padding: 10px 16px;
+          border-radius: 999px;
+          font-weight: 600;
+          background: rgba(255, 255, 255, 0.9);
+          color: #111;
+          box-shadow: 0 6px 16px rgba(0,0,0,.25);
+          transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+          &:hover { transform: translateY(-1px); box-shadow: 0 10px 20px rgba(0,0,0,.3); }
+          &:active { transform: translateY(0); box-shadow: 0 6px 12px rgba(0,0,0,.25); }
+        }
+      }
+    }
   }
 }
+
+
 
 @media (max-width: 737px) {
   #tienda {

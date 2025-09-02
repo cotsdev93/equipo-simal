@@ -11,9 +11,6 @@
   scroll-behavior: smooth;
   font-family: "bebas";
 }
-* ::-webkit-scrollbar {
-  display: none;
-}
 
 html {
   overflow: hidden;
